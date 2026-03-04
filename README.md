@@ -1,11 +1,11 @@
 # Semantic Keyword Extraction — Streamlit App
 
 Upload a PDF and extract semantically meaningful keywords using LSA embeddings,
-compared side-by-side with a TF-IDF baseline.
+also tried and compared side-by-side with a TF-IDF baseline.
 
 ---
 
-## Quick Start
+##  Start
 
 ```bash
 # 1. Install dependencies
@@ -15,7 +15,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-The app opens automatically at `http://localhost:8501`.
+Opens automatically at `http://localhost:8501`.
 
 ---
 
@@ -58,7 +58,7 @@ keyword_extraction/
 
 ---
 
-## How the Pipeline Works
+##   Pipeline 
 
 ```
 PDF Upload
@@ -101,10 +101,5 @@ python tests.py
 
 ---
 
-## Note on Embedding Model
 
-The LSA embedder (TF-IDF + TruncatedSVD) is a fully offline semantic embedding
-technique — no internet required, no model downloads. It is architecturally
-equivalent to KeyBERT/Sentence-BERT: both produce dense vectors that enable
-cosine-similarity-based keyword ranking. To swap in a transformer model, replace
-the `LSAEmbedder.embed()` call with any `sentence-transformers` encoder.
+
